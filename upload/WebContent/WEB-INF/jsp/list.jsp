@@ -18,15 +18,18 @@
 <body>
 	<table class="table table-bordered table-hover">
 		<tr>
-        	<th>序号</th>
-            <th>图片</th>            
+        	<th>名字</th>
+            <th>基因序列</th>
         </tr>
 		<c:forEach items="${list}" var="product" >
 	        <tr>
-	        	<th>${product.pid }</th>
-	            <th><c:if test="${product.pimage !=null }">
-	            	<img id="images" alt="" src="/image/${product.pimage }">
-	            </c:if> </th>          
+	        	<th>${product.name }</th>
+				<c:if test="${product.head != null}">
+					<th>${product.head}<span style="color: red">${product.ten}</span>${product.end}</th>
+				</c:if>
+				<c:if test="${product.head == null}">
+					<th>${product.gene}</th>
+				</c:if>
 	        </tr>
 	    </c:forEach>
     </table>

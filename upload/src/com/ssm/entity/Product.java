@@ -1,23 +1,52 @@
 package com.ssm.entity;
 
 public class Product {
-	private Integer pid;
-	private String pimage;
-	public Integer getPid() {
-		return pid;
+	private String name;
+	private String gene;
+
+	private String head;
+
+	private String ten;
+
+	private String end;
+
+	public String getName() {
+		return name;
 	}
-	public void setPid(Integer pid) {
-		this.pid = pid;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getPimage() {
-		return pimage;
+
+	public String getGene() {
+		return gene;
 	}
-	public void setPimage(String pimage) {
-		this.pimage = pimage;
+
+	public void setGene(String gene) {
+		this.gene = gene;
 	}
-	@Override
-	public String toString() {
-		return "Product [pid=" + pid + ", pimage=" + pimage + "]";
+
+	public String getHead() {
+		return head;
 	}
-	
+
+	public void setHead(String head) {
+		this.head = head;
+	}
+
+	public String getTen() {
+		return ten;
+	}
+
+	public void setTen(String ten) {
+		this.ten = ten;
+	}
+
+	public String getEnd() {
+		return end;
+	}
+
+	public void setEnd(String end) {
+		this.end = end;
+	}
 }

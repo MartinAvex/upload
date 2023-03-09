@@ -5,7 +5,7 @@
 	
   	<!-- 添加 -->
     <insert id="save" parameterType="com.ssm.entity.Product" >
-        insert into product(pimage) values (#{pimage})    
+        insert into product(name, gene, head, ten, end) values (#{name}, #{gene}, #{head}, #{ten}, #{end})
     </insert> 
     
     <!-- 查询用户-->
