@@ -11,7 +11,11 @@
     <!-- 查询用户-->
     <select id="list" resultType="com.ssm.entity.Product">
         select * from product
-    </select> 
+    </select>
+
+    <delete id="delete">
+        delete from product where name is not null
+    </delete>
     
 </mapper>
 
