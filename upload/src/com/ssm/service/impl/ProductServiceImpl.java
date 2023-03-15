@@ -27,7 +27,11 @@ public class ProductServiceImpl implements ProductService {
 	public void save(Product product) {
 		productMapper.save(product);
 	}
-	
-	
+
+	@Override
+	public void delete() {
+		productMapper.delete();
+	}
+
 
 }

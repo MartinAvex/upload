@@ -49,6 +49,9 @@ public class ProductController {
     @RequestMapping("/addProduct.do")
     public String fileUpload(MultipartFile file,Product product, ModelMap map) throws IOException, ServiceException {
 
+		//先删除表数据
+		productService.delete();
+
 		try {
 
 			List<Product> productList = POIUtils.readExcel(file, new POIUtils.ExcelRowsHandler<Product>() {
@@ -58,7 +61,6 @@ public class ProductController {
 					int i = 0;
 					String name = rows[i++]; // 名称
 					String gene = rows[i++]; // 基因序列
-
 
 					Product product = new Product();
 					product.setName(name);

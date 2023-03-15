@@ -9,4 +9,6 @@ public interface ProductMapper {
 	void save(Product product);
 	//查询商品
 	List<Product> list();
+	//删除表数据
+	void delete();
 }
